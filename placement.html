@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Placement Test | BrightMinds Learning Center</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg sticky-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <i class="bi bi-mortarboard-fill"></i>
+        <span>BrightMinds</span>
+      </a>
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-1">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-fill"></i> Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="programs.html"><i class="bi bi-book-fill"></i> Programs</a></li>
+          <li class="nav-item"><a class="nav-link" href="tutors.html"><i class="bi bi-people-fill"></i> Tutors</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html"><i class="bi bi-stars"></i> Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="register.html"><i class="bi bi-person-plus-fill"></i> Register</a></li>
+          <li class="nav-item"><a class="nav-link" href="placement.html"><i class="bi bi-clipboard-check-fill"></i> Placement</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html"><i class="bi bi-envelope-fill"></i> Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="page-header">
+      <div class="container text-center">
+        <span class="hero-badge">📋 Find Your Level</span>
+        <h1>Placement Test Request</h1>
+        <p>Not sure which level to join? Request a free placement assessment and we'll find the perfect fit</p>
+      </div>
+    </section>
+
+    <section class="section-padding alt-bg">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title">How It Works</h2>
+          <div class="divider mx-auto"></div>
+        </div>
+        <div class="row gy-4 text-center">
+          <div class="col-md-3">
+            <div class="how-step">
+              <div class="how-number">1</div>
+              <h6>Submit Request</h6>
+              <p>Fill in the form below with your child's details and preferred schedule.</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="how-step">
+              <div class="how-number">2</div>
+              <h6>We Contact You</h6>
+              <p>Our team calls within 24 hours to confirm the test date and time.</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="how-step">
+              <div class="how-number">3</div>
+              <h6>Take the Test</h6>
+              <p>A friendly 30–45 minute assessment at our center or online.</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="how-step">
+              <div class="how-number">4</div>
+              <h6>Get Placed</h6>
+              <p>We recommend the right program and level for your child.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-7">
+            <div class="form-card">
+              <h4 class="step-title">Request a Placement Assessment</h4>
+
+              <div class="row gy-3">
+
+                <div class="col-md-6">
+                  <label class="form-label">Student First Name *</label>
+                  <input type="text" class="form-input" id="plFirstName" placeholder="e.g. Lara"/>
+                  <span class="field-error" id="plFirstNameError"></span>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Student Last Name *</label>
+                  <input type="text" class="form-input" id="plLastName" placeholder="e.g. Nassar"/>
+                  <span class="field-error" id="plLastNameError"></span>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Student Age *</label>
+                  <input type="number" class="form-input" id="plAge"
+                         placeholder="e.g. 12" min="3" max="18"/>
+                  <span class="field-error" id="plAgeError"></span>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Approximate Level *</label>
+                  <select class="form-input" id="plLevel">
+                    <option value="">Select level</option>
+                    <option value="maternelle">Maternelle / GS</option>
+                    <option value="primaire">Primaire (EB1–EB6)</option>
+                    <option value="complementaire">Complémentaire (EB7–EB9)</option>
+                    <option value="seconde">Seconde</option>
+                    <option value="premiere">Première</option>
+                    <option value="terminale">Terminale</option>
+                    <option value="unsure">Not Sure</option>
+                  </select>
+                  <span class="field-error" id="plLevelError"></span>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label">Subjects to Assess *</label>
+                  <div class="checkbox-group">
+                    <label class="checkbox-item">
+                      <input type="checkbox" value="math"> Mathematics
+                    </label>
+                    <label class="checkbox-item">
+                      <input type="checkbox" value="physics"> Physics
+                    </label>
+                    <label class="checkbox-item">
+                      <input type="checkbox" value="chemistry"> Chemistry
+                    </label>
+                    <label class="checkbox-item">
+                      <input type="checkbox" value="biology"> Biology
+                    </label>
+                    <label class="checkbox-item">
+                      <input type="checkbox" value="english"> English
+                    </label>
+                    <label class="checkbox-item">
+                      <input type="checkbox" value="french"> French
+                    </label>
+                    <label class="checkbox-item">
+                      <input type="checkbox" value="arabic"> Arabic
+                    </label>
+                  </div>
+                  <span class="field-error" id="plSubjectsError"></span>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Preferred Date *</label>
+                  <input type="date" class="form-input" id="plDate"/>
+                  <span class="field-error" id="plDateError"></span>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Preferred Time *</label>
+                  <select class="form-input" id="plTime">
+                    <option value="">Select time slot</option>
+                    <option value="morning">Morning (9:00 AM – 12:00 PM)</option>
+                    <option value="afternoon">Afternoon (1:00 PM – 4:00 PM)</option>
+                    <option value="evening">Evening (4:00 PM – 7:00 PM)</option>
+                  </select>
+                  <span class="field-error" id="plTimeError"></span>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Parent Name *</label>
+                  <input type="text" class="form-input" id="plParentName"
+                         placeholder="e.g. Rima Nassar"/>
+                  <span class="field-error" id="plParentNameError"></span>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Parent Phone *</label>
+                  <input type="tel" class="form-input" id="plPhone"
+                         placeholder="e.g. 03 123 456"/>
+                  <span class="field-error" id="plPhoneError"></span>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label">Additional Comments</label>
+                  <textarea class="form-input" id="plNotes" rows="3"
+                    placeholder="Any specific concerns or areas you'd like us to focus on...">
+                  </textarea>
+                </div>
+
+              </div>
+
+              <div class="step-nav mt-4">
+                <div></div>
+                <button class="btn-cherry" id="submitPlacement">
+                  <i class="bi bi-send-fill"></i> Submit Request
+                </button>
+              </div>
+
+              <!-- SUCCESS -->
+              <div class="d-none mt-4" id="placementSuccess">
+                <div class="success-message">
+                  <div class="success-icon">
+                    <i class="bi bi-check-circle-fill"></i>
+                  </div>
+                  <h4>Request Received!</h4>
+                  <p>We'll call you within 24 hours to confirm your placement test date and time.</p>
+                  <a href="index.html" class="btn-cherry mt-3">Back to Home</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container text-center">
+        <h2>Already Know Your Level?</h2>
+        <p>Skip the test and register directly into your program.</p>
+        <div class="cta-buttons">
+          <a href="register.html" class="btn-cherry">Register Now</a>
+          <a href="programs.html" class="btn-cherry-outline">View Programs</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer mt-auto">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-md-4">
+          <h5 class="footer-brand"><i class="bi bi-mortarboard-fill"></i> BrightMinds</h5>
+          <p class="footer-tagline">Empowering every student to reach their full potential.</p>
+        </div>
+        <div class="col-md-4">
+          <h6 class="footer-heading">Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="tutors.html">Our Tutors</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6 class="footer-heading">Contact</h6>
+          <p><i class="bi bi-geo-alt-fill"></i> Beirut, Lebanon</p>
+          <p><i class="bi bi-telephone-fill"></i> +961 1 234 567</p>
+          <p><i class="bi bi-envelope-fill"></i> info@brightminds.lb</p>
+        </div>
+      </div>
+      <hr class="footer-divider"/>
+      <p class="footer-copy text-center">&copy; 2026 BrightMinds Learning Center. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/placement.js"></script>
+
+</body>
+</html>
