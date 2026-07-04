@@ -1,4 +1,4 @@
-BrightMinds Learning Center
+#BrightMinds Learning Center
 
 # Student Information
 Name: Yara Bitar 
