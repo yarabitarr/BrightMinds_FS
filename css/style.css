@@ -253,13 +253,21 @@ img { max-width: 100%; display: block; }
 }
 
 .hero-illustration {
-  width: 280px;
-  height: 280px;
-  background: linear-gradient(135deg, var(--cherry-light), var(--cherry));
+  width: 320px;
+  height: 320px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
+  border: 5px solid var(--cherry);
+  box-shadow: var(--shadow-hover);
+  flex-shrink: 0;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .hero-icon {
