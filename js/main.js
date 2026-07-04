@@ -66,7 +66,7 @@ class ScrollAnimator {
 }
 
 class DailyFact {
-  #apiKey = '';
+  #apiKey = 'wjxoSDeIiD4xviGslklY0Tc8vT8b4MqtXmZgkafE';
   #apiUrl = 'https://api.api-ninjas.com/v1/facts?limit=1';
 
   #fallbackFacts = [
@@ -153,9 +153,51 @@ class DailyFact {
   }
 }
 
+// ---------- 5. Animated Stats Counter ----------
+class StatsCounter {
+  constructor() {
+    this.stats = document.querySelectorAll('.stat-number');
+    if (!this.stats.length) return;
+    this.observe();
+  }
+
+  observe() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          this.animateCounter(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    this.stats.forEach(stat => observer.observe(stat));
+  }
+
+  animateCounter(el) {
+    const target = parseInt(el.textContent.replace(/\D/g, ''));
+    const suffix = el.textContent.replace(/[0-9]/g, '');
+    const duration = 1500;
+    const step = 16;
+    const increment = target / (duration / step);
+    let current = 0;
+
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        current = target;
+        clearInterval(timer);
+      }
+      el.textContent = Math.floor(current) + suffix;
+    }, step);
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   new NavHighlighter();
   new NavScroller();
   new ScrollAnimator();
+  new StatsCounter();
   new DailyFact();
 });
+
