@@ -1,3 +1,15 @@
+// UNIQUE FRONT-END REQUIREMENT:
+// "Add a contact form with styled inputs and real-time validation"
+
+// Implementation details:
+// - Real-time validation fires on 'input' (as user types) AND 'blur' (on field exit)
+// - Each field shows an inline error message instantly below it
+// - Valid fields turn GREEN border + show a checkmark icon inside the input
+// - Invalid fields turn RED border + show a descriptive error message
+// - Phone field is optional but validated if filled (pattern: 7-15 digits)
+// - Message field has a live character counter (0/500)
+// - Submit button shows "Sending..." animation for 1.5s before success screen
+// - "Send Another Message" button fully resets the form back to empty state
 class ContactForm {
   #rules = {
     contactName:    { required: true,  minLength: 2,  pattern: null,                           label: 'Full name' },
