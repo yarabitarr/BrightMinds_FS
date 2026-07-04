@@ -1737,3 +1737,16 @@ textarea.form-input {
 .social-link:hover i {
   transform: rotate(15deg) scale(1.2);
 }
+
+.map-wrapper {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 2px solid var(--cherry-light);
+  margin-top: 0.8rem;
+}
+
+.map-wrapper iframe {
+  display: block;
+  width: 100%;
+  border-radius: var(--radius);
+}
