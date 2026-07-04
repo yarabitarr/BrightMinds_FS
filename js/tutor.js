@@ -1,34 +1,34 @@
 class TutorManager {
-  #tutors = [
-    { id: 1, name: "Tutor 1", subject: "Mathematics", category: "math", level: "Brevet & Bac", experience: "8 yrs", rating: 4.9 },
-    { id: 2, name: "Tutor 2", subject: "Physics", category: "math", level: "Secondaire", experience: "6 yrs", rating: 4.8 },
-    { id: 3, name: "Tutor 3", subject: "Chemistry", category: "math", level: "Terminale SE", experience: "10 yrs", rating: 5.0 },
-    { id: 4, name: "Tutor 4", subject: "Biology", category: "math", level: "Terminale SV", experience: "7 yrs", rating: 4.7 },
-    { id: 5, name: "Tutor 5", subject: "Mathematics", category: "math", level: "Primaire", experience: "5 yrs", rating: 4.6 },
-    { id: 6, name: "Tutor 6", subject: "Physics", category: "math", level: "Complémentaire", experience: "9 yrs", rating: 4.9 },
-    { id: 7, name: "Tutor 7", subject: "English", category: "language", level: "All levels", experience: "11 yrs", rating: 5.0 },
-    { id: 8, name: "Tutor 8", subject: "French", category: "language", level: "Brevet & Bac", experience: "8 yrs", rating: 4.8 },
-    { id: 9, name: "Tutor 9", subject: "Arabic", category: "language", level: "Primaire", experience: "6 yrs", rating: 4.7 },
-    { id: 10, name: "Tutor 10", subject: "English", category: "language", level: "Maternelle", experience: "4 yrs", rating: 4.6 },
-    { id: 11, name: "Tutor 11", subject: "French", category: "language", level: "Secondaire", experience: "9 yrs", rating: 4.9 },
-    { id: 12, name: "Tutor 12", subject: "Arabic", category: "language", level: "Brevet & Bac", experience: "7 yrs", rating: 4.8 },
-    { id: 13, name: "Tutor 13", subject: "Lebanese Program", category: "lebanese", level: "Maternelle (GS)", experience: "10 yrs", rating: 5.0 },
-    { id: 14, name: "Tutor 14", subject: "Lebanese Program", category: "lebanese", level: "Primaire (EB1-EB6)", experience: "8 yrs", rating: 4.9 },
-    { id: 15, name: "Tutor 15", subject: "Lebanese Program", category: "lebanese", level: "Complémentaire", experience: "6 yrs", rating: 4.7 },
-    { id: 16, name: "Tutor 16", subject: "Lebanese Program", category: "lebanese", level: "Seconde", experience: "9 yrs", rating: 4.8 },
-    { id: 17, name: "Tutor 17", subject: "Lebanese Program", category: "lebanese", level: "Première (LS/SE)", experience: "12 yrs", rating: 5.0 },
-    { id: 18, name: "Tutor 18", subject: "Lebanese Program", category: "lebanese", level: "Terminale (LS/SE)", experience: "13 yrs", rating: 5.0 }
-  ];
-
-  #currentFilter = 'all';
-  #currentSearch = '';
-
   constructor() {
-    this.gridEl = document.getElementById('tutorsGrid');
-    this.resultsCountEl = document.getElementById('resultsCount');
+    this.tutors = [
+      { id: 1,  name: "Mr. Dany Nassar",  subject: "Mathematics",      category: "math",     level: "GS - LS",       experience: "8 yrs",  rating: 4.9 },
+      { id: 2,  name: "Mr. Karim Haddad",  subject: "Physics",          category: "math",     level: "Seconde - Première", experience: "6 yrs",  rating: 4.8 },
+      { id: 3,  name: "Ms. Rima Sleiman",  subject: "Chemistry",        category: "math",     level: "GS - LS - SE",       experience: "10 yrs", rating: 5.0 },
+      { id: 4,  name: "Ms. Lara Mansour",  subject: "Biology",          category: "math",     level: "LS - SE",       experience: "7 yrs",  rating: 4.7 },
+      { id: 5,  name: "Mr. Hady Fares",  subject: "Mathematics",      category: "math",     level: "Primaire - Complémentaire",           experience: "5 yrs",  rating: 4.6 },
+      { id: 6,  name: "Ms. Amal Massoud",  subject: "Physics",          category: "math",     level: "Complémentaire",     experience: "9 yrs",  rating: 4.9 },
+      { id: 7,  name: "Mr. Wassim Rizk",  subject: "Mathematics",      category: "math",     level: "Seconde - Première - SE",       experience: "10 yrs", rating: 5.0 },
+      { id: 8,  name: "Ms. Leila Bitar",  subject: "Physics",          category: "math",     level: "GS - LS - SE",       experience: "7 yrs",  rating: 4.7 },
+      { id: 9,  name: "Mr. Joseph Khoury",  subject: "Chemistry",        category: "math",     level: "Seconde - Première",       experience: "10 yrs", rating: 5.0 },
+      { id: 10,  name: "Mr. Antoine Saab",  subject: "Biology",          category: "math",     level: "Complémentaire",       experience: "7 yrs",  rating: 4.7 },
+      { id: 11,  name: "Ms. Mariam Choueiri",  subject: "English",          category: "language", level: "All levels",         experience: "11 yrs", rating: 5.0 },
+      { id: 12,  name: "Mr. Georges Saad",  subject: "French",           category: "language", level: "All levels",       experience: "8 yrs",  rating: 4.8 },
+      { id: 13,  name: "Ms. Nada Hajj",  subject: "Arabic",           category: "language", level: "All levels",           experience: "6 yrs",  rating: 4.7 },
+      { id: 14, name: "Mr. Samir Rizk", subject: "English",          category: "language", level: "Maternelle",         experience: "4 yrs",  rating: 4.6 },
+      { id: 15, name: "Ms. Hala Khoury", subject: "French",           category: "language", level: "Maternelle",         experience: "7 yrs",  rating: 4.9 },
+      { id: 16, name: "Mr. Walid Ayoub", subject: "Arabic",           category: "language", level: "Maternelle",       experience: "6 yrs",  rating: 4.8 },
+      { id: 17, name: "Ms. Rim Kfoury", subject: "Sociology & Economics", category: "SE", level: "Première & Terminale SE", experience: "8 yrs", rating: 4.9 },
+      { id: 18, name: "Mr. Youssef Haddad", subject: "Sociology & Economics", category: "SE", level: "Première & Terminale SE", experience: "6 yrs", rating: 4.7 }
+    ];
+
+    this.currentFilter = 'all';
+    this.currentSearch = '';
+
+    this.gridEl      = document.getElementById('tutorsGrid');
+    this.resultsEl   = document.getElementById('resultsCount');
     this.noResultsEl = document.getElementById('noResults');
     this.searchInput = document.getElementById('tutorSearch');
-    this.filterBtns = document.querySelectorAll('.filter-btn');
+    this.filterBtns  = document.querySelectorAll('.filter-btn');
 
     if (!this.gridEl) return;
 
@@ -41,32 +41,31 @@ class TutorManager {
       btn.addEventListener('click', () => {
         this.filterBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        this.#currentFilter = btn.dataset.filter;
+        this.currentFilter = btn.dataset.filter;
         this.render();
       });
     });
 
     this.searchInput.addEventListener('input', (e) => {
-      this.#currentSearch = e.target.value.toLowerCase().trim();
+      this.currentSearch = e.target.value.toLowerCase().trim();
       this.render();
     });
   }
 
-  getFilteredTutors() {
-    return this.#tutors.filter(tutor => {
-      const matchesFilter = this.#currentFilter === 'all' || tutor.category === this.#currentFilter;
-      const matchesSearch =
-        tutor.name.toLowerCase().includes(this.#currentSearch) ||
-        tutor.subject.toLowerCase().includes(this.#currentSearch) ||
-        tutor.level.toLowerCase().includes(this.#currentSearch);
-      return matchesFilter && matchesSearch;
+  getFiltered() {
+    return this.tutors.filter(tutor => {
+      const matchFilter = this.currentFilter === 'all' || tutor.category === this.currentFilter;
+      const matchSearch =
+        tutor.name.toLowerCase().includes(this.currentSearch) ||
+        tutor.subject.toLowerCase().includes(this.currentSearch) ||
+        tutor.level.toLowerCase().includes(this.currentSearch);
+      return matchFilter && matchSearch;
     });
   }
 
   render() {
-    const filtered = this.getFilteredTutors();
-
-    this.resultsCountEl.textContent = `Showing ${filtered.length} of ${this.#tutors.length} tutors`;
+    const filtered = this.getFiltered();
+    this.resultsEl.textContent = `Showing ${filtered.length} of ${this.tutors.length} tutors`;
 
     if (filtered.length === 0) {
       this.gridEl.innerHTML = '';
@@ -75,8 +74,7 @@ class TutorManager {
     }
 
     this.noResultsEl.classList.add('d-none');
-
-    this.gridEl.innerHTML = filtered.map(tutor => this.createCard(tutor)).join('');
+    this.gridEl.innerHTML = filtered.map(t => this.createCard(t)).join('');
   }
 
   createCard(tutor) {
@@ -96,18 +94,18 @@ class TutorManager {
               <span><i class="bi bi-clock-fill"></i> ${tutor.experience}</span>
               <span><i class="bi bi-star-fill"></i> ${tutor.rating}</span>
             </div>
-            <span class="tutor-badge">${this.getCategoryLabel(tutor.category)}</span>
+            <span class="tutor-badge">${this.getLabel(tutor.category)}</span>
           </div>
         </div>
       </div>
     `;
   }
 
-  getCategoryLabel(category) {
+  getLabel(category) {
     const labels = {
       math: 'Math & Sciences',
       language: 'Languages',
-      lebanese: 'Lebanese Program'
+      SE : 'Sociology & Economics'
     };
     return labels[category] || category;
   }

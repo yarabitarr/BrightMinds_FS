@@ -672,15 +672,16 @@ img { max-width: 100%; display: block; }
 .tutor-avatar {
   width: 100%;
   height: 140px;
-  background: linear-gradient(135deg, var(--cherry-light), var(--cherry));
+  background: var(--white);
+  border-bottom: 2px solid var(--cherry-light);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .tutor-avatar i {
-  font-size: 3.5rem;
-  color: var(--white);
+  font-size: 5rem;
+  color: var(--cherry);
 }
 
 .tutor-body {
